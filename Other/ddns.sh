@@ -37,25 +37,3 @@ ddns-go -s install
 
 # 启动ddns-go服务
 systemctl start ddns-go
-
-# 创建systemd服务单元以实现开机自启
-cat <<EOF > /etc/systemd/system/ddns-update.service
-[Unit]
-Description=DDNS Update Service
-After=network.target
-
-[Service]
-Type=oneshot
-ExecStart=/usr/bin/ddns-go
-RemainAfterExit=yes
-
-[Install]
-WantedBy=multi-user.target
-EOF
-
-# 重新加载systemd，启用并启动服务
-systemctl daemon-reload
-systemctl enable ddns-update.service
-systemctl start ddns-update.service
-
-echo "DDNS-Go 安装并配置自启动完成。"
