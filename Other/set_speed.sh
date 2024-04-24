@@ -3,7 +3,7 @@
 # 自动查找主要的网络接口（排除lo）
 INTERFACE=$(ip -o link show | awk -F': ' '{print \$2}' | grep -v lo | head -n 1)
 
-# 限制速度为20Mbps
+# 限制速度为23mbit
 SPEED="23mbit"
 
 # 清除现有的流量控制设置
