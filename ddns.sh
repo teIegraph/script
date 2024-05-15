@@ -35,5 +35,8 @@ rm -rf ./ddns
 # 安装ddns-go服务
 ddns-go -s install
 
+# 设置ddns-go服务开机自动启动
+systemctl enable ddns-go
+
 # 启动ddns-go服务
-systemctl start ddns-go
+systemctl start ddns-go    
