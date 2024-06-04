@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 定义要下载的文件的URL
-FILE_URL="https://github.com/teIegraph/scripts/raw/main/nezha-agent2.service"
+FILE_URL="https://github.com/teIegraph/script/raw/main/nezha-agent2.service"
 
 # 定义目标目录
 DEST_DIR="/etc/systemd/system/"
